@@ -11,15 +11,9 @@ console.log("running on 8000");*/
 
 var express = require('express');
 var app = express();
-
+ 
 app.get('/', function (req, res) {
-  //res.send('Hello World!');
-  res.sendFile(path.join(__dirname + '/index.html'));
-});
+  res.send('Hello World');
+}).listen(8000);
 
-var server = app.listen(8000, function () {
-  var host = server.address().address;
-  var port = server.address().port;
-
-  console.log('Example app listening at http://%s:%s', host, port);
-});
+console.log("LOCALHOST 8000 ACTIVATE");
