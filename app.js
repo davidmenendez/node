@@ -13,7 +13,8 @@ var express = require('express');
 var app = express();
 
 app.get('/', function (req, res) {
-  res.send('Hello World!');
+  //res.send('Hello World!');
+  res.sendFile(path.join(__dirname + '/index.html'));
 });
 
 var server = app.listen(8000, function () {

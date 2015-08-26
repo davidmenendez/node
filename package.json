@@ -7,8 +7,7 @@
     "url": "https://github.com/davidmenendez/node.git"
   },
   "dependencies": {
-    "express": "*",
-    "jquery": "^2.1.4"
+    "express": "*"
   },
   "license": "MIT",
   "scripts": {
