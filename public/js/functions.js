@@ -1,1 +1,1 @@
-function hey(){console.log("HEY YOU")}function square(n){return n*n}
+function toggler(t){var e="hidden";if(t.classList)t.classList.toggle(e);else{var s=t.className.split(" "),n=s.indexOf(e);n>=0?s.splice(n,1):s.push(e),t.className=s.join(" ")}}var button=document.getElementById("toggler");button.addEventListener("click",function(){toggler(button)});
