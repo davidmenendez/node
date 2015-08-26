@@ -1,3 +1,1 @@
-function hey(){
-	console.log("HEY");
-}
+function hey(){console.log("HEY YOU")}function square(n){return n*n}
