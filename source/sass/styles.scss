@@ -14,7 +14,6 @@ body{
 	font-family: $primary-font;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	background: #333;
 }
 ul{
 	list-style: none;
@@ -27,12 +26,16 @@ h1, h2, h3, h4{
 }
 h1{
 	font-size: 90px;
-	text-align: center;
 	margin-bottom: 15px;
-
 	@include phone{
 		font-size: 60px;
 	}
+}
+h2{
+	font-size: 45px;
+}
+h3{
+	font-size: 34px;
 }
 p, a, li, span{
 	line-height: 1.4;
@@ -51,9 +54,37 @@ a{
 
 /*structures*/
 .container{
-	max-width: 900px;
+	max-width: 960px;
 	margin: 0 auto;
 	padding: 15px;
+}
+.fullscreen{
+	min-height: 100vh;
+	&-gray{
+		background: #333;
+	}
+	&-white{
+		background: #fff;
+		color: #333;
+	}
+}
+
+/*columns*/
+.row{
+	clear: both;
+	overflow: hidden;
+	margin: 0 -15px;
+}
+.col{
+	padding: 0 15px;
+	float: left;
+	&-col4{
+		width: 33.3333%;
+	}
+	@include phone{
+		width: 100%;
+		float: none;
+	}
 }
 
 /*helper classes*/
@@ -70,10 +101,12 @@ a{
 	cursor: pointer;
 	&:hover{
 		background: $link-color-hover;
+		color: #fff;
 	}
 	@include phone{
 		max-width: none;
 		display: block;
+		margin-bottom: 15px;
 	}
 }
 .hidden{
@@ -105,17 +138,6 @@ nav{
 	}
 }
 
-/*lyrics*/
-.lyric-section{
-	padding: 15px 0;
-
-	p{
-		margin: 0;
-	}
-	&:hover{
-		background: #666;
-	}
-}
 
 /*footer*/
 footer{

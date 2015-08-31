@@ -10,8 +10,7 @@ body {
   color: #eee;
   font-family: "Open Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background: #333; }
+  -moz-osx-font-smoothing: grayscale; }
 
 ul {
   list-style: none; }
@@ -23,11 +22,16 @@ h1, h2, h3, h4 {
 
 h1 {
   font-size: 90px;
-  text-align: center;
   margin-bottom: 15px; }
   @media (max-width: 480px) {
     h1 {
       font-size: 60px; } }
+
+h2 {
+  font-size: 45px; }
+
+h3 {
+  font-size: 34px; }
 
 p, a, li, span {
   line-height: 1.4;
@@ -44,9 +48,33 @@ a {
 
 /*structures*/
 .container {
-  max-width: 900px;
+  max-width: 960px;
   margin: 0 auto;
   padding: 15px; }
+
+.fullscreen {
+  min-height: 100vh; }
+  .fullscreen-gray {
+    background: #333; }
+  .fullscreen-white {
+    background: #fff;
+    color: #333; }
+
+/*columns*/
+.row {
+  clear: both;
+  overflow: hidden;
+  margin: 0 -15px; }
+
+.col {
+  padding: 0 15px;
+  float: left; }
+  .col-col4 {
+    width: 33.3333%; }
+  @media (max-width: 480px) {
+    .col {
+      width: 100%;
+      float: none; } }
 
 /*helper classes*/
 .text-center {
@@ -61,11 +89,13 @@ a {
   width: 100%;
   cursor: pointer; }
   .button:hover {
-    background: #FF6755; }
+    background: #FF6755;
+    color: #fff; }
   @media (max-width: 480px) {
     .button {
       max-width: none;
-      display: block; } }
+      display: block;
+      margin-bottom: 15px; } }
 
 .hidden {
   opacity: 0; }
@@ -91,14 +121,6 @@ nav a {
   @media (max-width: 480px) {
     nav a {
       display: block; } }
-
-/*lyrics*/
-.lyric-section {
-  padding: 15px 0; }
-  .lyric-section p {
-    margin: 0; }
-  .lyric-section:hover {
-    background: #666; }
 
 /*footer*/
 footer {
