@@ -1,6 +1,7 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var uglify = require("gulp-uglify");
+var nodemon = require("gulp-nodemon");
 
 gulp.task('styles', function() {
     gulp.src('./source/sass/**/*.scss')
@@ -13,8 +14,16 @@ gulp.task('uglify', function() {
         .pipe(gulp.dest('./public/js/'))
 });
 
-//Watch task
-gulp.task('default',function() {
-    gulp.watch('./source/sass/**/*.scss',['styles']);
+gulp.task("start", function(){
+	nodemon({
+		script: "app.js"
+	});
+});
+
+gulp.task("watch", function(){
+	gulp.watch('./source/sass/**/*.scss',['styles']);
 	gulp.watch('./source/js/**/*.js',['uglify']);
 });
+
+//Watch task
+gulp.task('default',["watch", "start"]);
