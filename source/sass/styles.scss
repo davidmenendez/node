@@ -1,15 +1,4 @@
-$primary-font-color: #eee;
-$link-color: #C23D2D;
-$link-color-hover: #FF6755;
-$primary-font: 'Open Sans', sans-serif;
-
-$phone-width: 480px;
-
-@mixin phone {
-  @media (max-width: #{$phone-width}) {
-    @content;
-  }
-}
+@import "mixins";
 
 /*global*/
 *{
@@ -39,7 +28,7 @@ h1, h2, h3, h4{
 h1{
 	font-size: 90px;
 	text-align: center;
-	margin-bottom: 30px;
+	margin-bottom: 15px;
 
 	@include phone{
 		font-size: 60px;
@@ -75,10 +64,16 @@ a{
 	display: inline-block;
 	background: $link-color;
 	color: #eee;
-	padding: 10px;
+	padding: 10px 0;
+	max-width: 100px;
+	width: 100%;
 	cursor: pointer;
 	&:hover{
 		background: $link-color-hover;
+	}
+	@include phone{
+		max-width: none;
+		display: block;
 	}
 }
 .hidden{
@@ -86,9 +81,6 @@ a{
 }
 
 /*nav*/
-.tophead{
-	margin-bottom: 15px;
-}
 nav{
 	ul{
 		overflow: hidden;

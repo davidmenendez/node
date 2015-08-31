@@ -1,0 +1,12 @@
+$primary-font-color: #eee;
+$link-color: #C23D2D;
+$link-color-hover: #FF6755;
+$primary-font: 'Open Sans', sans-serif;
+
+$phone-width: 480px;
+
+@mixin phone {
+  @media (max-width: #{$phone-width}) {
+    @content;
+  }
+}
